@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:31:07 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 20:31:11 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/27 21:59:00 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ void				ft_parse_args(int argc, char *argv[], t_stack **stack_a);
 void				ft_sort(t_stack **stack_a, t_stack **stack_b);
 int					ft_stack_size(t_stack *stack);
 int					ft_get_tail_index(t_stack *stack);
-/* void	ft_display_list(t_stack *head); */
 
 // sorting //
 
@@ -56,33 +55,33 @@ void				ft_move_bottom_elements_to_a(t_stack **stack_a,
 
 // parsing //
 
-bool	ft_is_valid_int(const char *str);
-bool	ft_is_int_range(const char *str);
-bool	ft_has_duplicates(t_stack *stack, int value);
-bool	ft_is_whitespace(char c);
-bool	ft_str_is_whitespace(const char *str);
-void	ft_add_to_stack(char *token, t_stack **stack_a);
-void	ft_handle_token(char *arg, t_stack **stack_a);
+bool				ft_is_valid_int(const char *str);
+bool				ft_is_int_range(const char *str);
+bool				ft_has_duplicates(t_stack *stack, int value);
+bool				ft_is_whitespace(char c);
+bool				ft_str_is_whitespace(const char *str);
+void				ft_add_to_stack(char *token, t_stack **stack_a);
+void				ft_handle_token(char *arg, t_stack **stack_a);
 
 // operations //
 
-void	ft_push(t_stack **from_stack, t_stack **to_stack);
-void	ft_pa(t_stack **stack_a, t_stack **stack_b);
-void	ft_pb(t_stack **stack_a, t_stack **stack_b);
+void				ft_push(t_stack **from_stack, t_stack **to_stack);
+void				ft_pa(t_stack **stack_a, t_stack **stack_b);
+void				ft_pb(t_stack **stack_a, t_stack **stack_b);
 
-void	ft_swap(t_stack **stack);
-void	ft_sa(t_stack **stack_a);
-void	ft_sb(t_stack **stack_b);
-void	ft_ss(t_stack **stack_a, t_stack **stack_b);
+void				ft_swap(t_stack **stack);
+void				ft_sa(t_stack **stack_a);
+void				ft_sb(t_stack **stack_b);
+void				ft_ss(t_stack **stack_a, t_stack **stack_b);
 
-void	ft_rotate(t_stack **stack);
-void	ft_ra(t_stack **stack_a);
-void	ft_rb(t_stack **stack_b);
-void	ft_rr(t_stack **stack_a, t_stack **stack_b);
+void				ft_rotate(t_stack **stack);
+void				ft_ra(t_stack **stack_a);
+void				ft_rb(t_stack **stack_b);
+void				ft_rr(t_stack **stack_a, t_stack **stack_b);
 
-void	ft_reverse_rotate(t_stack **stack);
-void	ft_rra(t_stack **stack_a);
-void	ft_rrb(t_stack **stack_b);
-void	ft_rrr(t_stack **stack_a, t_stack **stack_b);
+void				ft_reverse_rotate(t_stack **stack);
+void				ft_rra(t_stack **stack_a);
+void				ft_rrb(t_stack **stack_b);
+void				ft_rrr(t_stack **stack_a, t_stack **stack_b);
 
 #endif

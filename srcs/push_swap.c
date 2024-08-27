@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:30:25 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 20:30:30 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/27 22:05:38 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int argc, char **argv)
 	stack_a = NULL;
 	stack_b = NULL;
 	if (argc < 2)
-		exit(0);
+		ft_error(1);
 	ft_parse_args(argc, argv, &stack_a);
 	if (!ft_is_sorted(stack_a))
 		ft_sort(&stack_a, &stack_b);

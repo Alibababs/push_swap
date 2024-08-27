@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:31:51 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 20:31:53 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/27 21:58:35 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,20 +90,3 @@ int	ft_get_tail_index(t_stack *stack)
 	}
 	return (stack->index);
 }
-
-/*
-void	ft_display_list(t_stack *head)
-{
-	t_stack	*temp;
-
-	temp = head;
-	if (temp == NULL)
-		ft_printf("LinkedList is empty");
-	while (temp != NULL)
-	{
-		ft_printf("%d - index : %d\n", temp->value, temp->index);
-		temp = temp->next;
-	}
-	ft_printf("\n");
-}
-*/

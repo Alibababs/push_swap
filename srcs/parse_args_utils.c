@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:30:03 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 20:30:05 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/27 21:46:20 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,12 @@ bool	ft_is_valid_int(const char *str)
 
 bool	ft_is_int_range(const char *str)
 {
-	int	value;
+	long	value;
 
-	value = ft_atoi(str);
-	if (value >= INT_MIN && value <= INT_MAX)
-		return (true);
-	return (false);
+	value = ft_atol(str);
+	if (value < INT_MIN || value > INT_MAX)
+		return (false);
+	return (true);
 }
 
 bool	ft_has_duplicates(t_stack *stack, int value)

@@ -1,8 +1,12 @@
+GREEN=\033[1;32m
+RED=\033[0;31m
+BLUE=\033[0;34m
+
 NAME		=	push_swap
 
-CC			=	gcc
+CC			=	cc
 
-FLAG		=	-Wall -Wextra -Werror -g3 -I ./include
+FLAG		=	-Wall -Wextra -Werror -g3 -I ./includes
 
 LIBFT_PATH	=	./libft/
 
@@ -35,32 +39,29 @@ OBJ			=	$(SRC:.c=.o)
 all: $(NAME)
 
 $(LIBFT_LIB):
-	@echo "\033[0;33mCOMPILING $(LIBFT_PATH)\n"
+	@echo "$(BLUE)COMPILING $(LIBFT_PATH)\n"
 	@make -sC $(LIBFT_PATH)
-	@echo "\033[1;32mlibft.a created\n"
+	@echo "$(GREEN)libft.a created\n"
 
 $(NAME): $(LIBFT_LIB) $(OBJ)
-	@echo "\033[0;33mCOMPILING $(NAME)...\n"
+	@echo "$(BLUE)COMPILING $(NAME)...\n"
 	@$(CC) $(OBJ) $(LIBFT_LIB) -o $(NAME)
-	@echo "\033[1;32m./$(NAME) created\n"
+	@echo "$(GREEN)./$(NAME) created\n"
 
 clean:
-	@echo "\033[0;31m\nDeleting Obj file in $(LIBFT_PATH)...\n"
+	@echo "$(RED)\nDeleting Obj file in $(LIBFT_PATH)...\n"
 	@make clean -sC $(LIBFT_PATH)
-	@echo "\033[1;32mDone\n"
-	@echo "\033[0;31mDeleting $(NAME) object...\n"
+	@echo "$(GREEN)Done\n"
+	@echo "$(RED)Deleting $(NAME) object...\n"
 	@rm -f $(OBJ)
-	@echo "\033[1;32mDone\n"
+	@echo "$(GREEN)Done\n"
 
 fclean: clean
-	@echo "\033[0;31mDeleting $(NAME) executable...\n"
+	@echo "$(RED)Deleting $(NAME) executable...\n"
 	@rm -f $(NAME)
 	@make fclean -sC $(LIBFT_PATH)
-	@echo "\033[1;32mDone\n"
+	@echo "$(GREEN)Done\n"
 
 re: fclean all
 
-norminette :
-	norminette
-
-.PHONY: all clean fclean re norminette
+.PHONY: all clean fclean re
