@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 21:51:53 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 21:51:56 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/28 01:08:08 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ void	ft_rra(t_stack **stack_a)
 	if (*stack_a && ft_stack_size(*stack_a) < 2)
 		return ;
 	ft_reverse_rotate(stack_a);
-	ft_printf("%s", "rra\n");
+	ft_printf("rra\n");
 }
 
 void	ft_rrb(t_stack **stack_b)
@@ -43,7 +43,7 @@ void	ft_rrb(t_stack **stack_b)
 	if (*stack_b && ft_stack_size(*stack_b) < 2)
 		return ;
 	ft_reverse_rotate(stack_b);
-	ft_printf("%s", "rrb\n");
+	ft_printf("rrb\n");
 }
 
 void	ft_rrr(t_stack **stack_a, t_stack **stack_b)
@@ -53,5 +53,5 @@ void	ft_rrr(t_stack **stack_a, t_stack **stack_b)
 		return ;
 	ft_reverse_rotate(stack_a);
 	ft_reverse_rotate(stack_b);
-	ft_printf("%s", "rrr\n");
+	ft_printf("rrr\n");
 }
