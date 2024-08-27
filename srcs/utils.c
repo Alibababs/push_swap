@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:31:51 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 22:39:56 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/28 00:54:28 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,21 @@ void	ft_assign_indexes(t_stack **stack_a)
 	}
 }
 
-void	ft_free_stack(t_stack **stack_a)
+void	ft_free_stack(t_stack **stack)
 {
-	t_stack	*temp;
+	t_stack	*current;
+	t_stack	*next;
 
-	while (*stack_a != NULL)
+	if (!stack || !*stack)
+		return ;
+	current = *stack;
+	while (current)
 	{
-		temp = *stack_a;
-		*stack_a = (*stack_a)->next;
-		free(temp);
+		next = current->next;
+		free(current);
+		current = next;
 	}
+	*stack = NULL;
 }
 
 int	ft_stack_size(t_stack *stack)
