@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:30:03 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 23:04:58 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/28 01:00:44 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ bool	ft_is_int_range(const char *str)
 
 bool	ft_has_duplicates(t_stack *stack, int value)
 {
-	while (stack != NULL)
+	while (stack)
 	{
 		if (stack->value == value)
 			return (true);
