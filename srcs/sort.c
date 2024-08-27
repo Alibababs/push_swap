@@ -6,13 +6,13 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:31:36 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 20:31:49 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/27 22:50:31 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	handle_large_sort(t_stack **stack_a, t_stack **stack_b)
+static void	handle_large_sort(t_stack **stack_a, t_stack **stack_b)
 {
 	ft_divide_and_move(stack_a, stack_b);
 	ft_sort_three(stack_a);

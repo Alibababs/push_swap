@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 21:52:01 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 21:52:03 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/27 22:57:56 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ void	ft_rr(t_stack **stack_a, t_stack **stack_b)
 	ft_rotate(stack_b);
 	ft_printf("%s", "rr\n");
 }
-
 
 void	ft_rotate(t_stack **stack)
 {

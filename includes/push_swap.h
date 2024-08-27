@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:31:07 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 21:59:00 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/27 22:57:28 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s_stack
 
 }					t_stack;
 
+void				ft_error(void);
 void				ft_pushlst(t_stack **stack, int value);
 void				ft_assign_indexes(t_stack **stack_a);
 void				ft_free_stack(t_stack **stack);
@@ -36,14 +37,12 @@ void				ft_sort(t_stack **stack_a, t_stack **stack_b);
 int					ft_stack_size(t_stack *stack);
 int					ft_get_tail_index(t_stack *stack);
 
-// sorting //
+/* SORT */
 
 bool				ft_is_sorted(t_stack *stack);
 int					ft_find_index(t_stack *stack, int target);
 void				ft_sort_two(t_stack **stack);
 void				ft_sort_three(t_stack **stack);
-void				handle_sorting_cases(t_stack **stack, t_stack *first,
-						t_stack *second, t_stack *third);
 void				ft_partition_and_move(t_stack **stack_a, t_stack **stack_b,
 						int pv1, int pv2);
 void				ft_divide_and_move(t_stack **stack_a, t_stack **stack_b);
@@ -53,17 +52,14 @@ void				ft_move_top_elements_to_a(t_stack **stack_a,
 void				ft_move_bottom_elements_to_a(t_stack **stack_a,
 						t_stack **stack_b);
 
-// parsing //
+/* PARSING */
 
 bool				ft_is_valid_int(const char *str);
 bool				ft_is_int_range(const char *str);
 bool				ft_has_duplicates(t_stack *stack, int value);
-bool				ft_is_whitespace(char c);
 bool				ft_str_is_whitespace(const char *str);
-void				ft_add_to_stack(char *token, t_stack **stack_a);
-void				ft_handle_token(char *arg, t_stack **stack_a);
 
-// operations //
+/* OPERATIONS */
 
 void				ft_push(t_stack **from_stack, t_stack **to_stack);
 void				ft_pa(t_stack **stack_a, t_stack **stack_b);

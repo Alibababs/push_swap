@@ -6,13 +6,13 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:30:03 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 21:46:20 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/27 22:48:02 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-bool	ft_is_whitespace(char c)
+static bool	ft_is_whitespace(char c)
 {
 	return (c == ' ' || c == '\t' || c == '\n'
 		|| c == '\r' || c == '\v' || c == '\f');

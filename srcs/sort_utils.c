@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:31:22 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 20:31:26 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/27 22:51:56 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_sort_two(t_stack **stack)
 		ft_sa(stack);
 }
 
-void	handle_sorting_cases(t_stack **stack, t_stack *first,
+static void	handle_sorting_cases(t_stack **stack, t_stack *first,
 		t_stack *second, t_stack *third)
 {
 	if (first->value > second->value && first->value > third->value)

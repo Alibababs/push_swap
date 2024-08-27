@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:31:51 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 21:58:35 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/27 22:39:56 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_pushlst(t_stack **stack, int value)
 
 	new_node = (t_stack *)malloc(sizeof(t_stack));
 	if (new_node == NULL)
-		ft_error(0);
+		ft_error();
 	new_node->value = value;
 	new_node->next = NULL;
 	if (*stack == NULL)

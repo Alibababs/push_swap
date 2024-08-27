@@ -49,7 +49,7 @@ $(NAME): $(LIBFT_LIB) $(OBJ)
 	@echo "$(GREEN)./$(NAME) created\n"
 
 clean:
-	@echo "$(RED)\nDeleting Obj file in $(LIBFT_PATH)...\n"
+	@echo "$(RED)\nDeleting obj file in $(LIBFT_PATH)...\n"
 	@make clean -sC $(LIBFT_PATH)
 	@echo "$(GREEN)Done\n"
 	@echo "$(RED)Deleting $(NAME) object...\n"
