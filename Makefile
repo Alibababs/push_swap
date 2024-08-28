@@ -29,8 +29,8 @@ C_FILE		=	operations/push	 			\
 				parse_args 					\
 				parse_args_utils			\
 
-BONUS_FILE	=	../b_checker/checker		\
-				../b_checker/checker_utils	\
+BONUS_FILE	=	../srcs_bonus/checker		\
+				../srcs_bonus/checker_utils	\
 				operations/push	 			\
 				operations/reverse_rotate	\
 				operations/rotate 			\
