@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:31:07 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/28 14:24:13 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/28 18:13:38 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,15 +82,15 @@ void				ft_rrr(t_stack **stack_a, t_stack **stack_b);
 
 /* CHECKER */
 
-int		execute_swap_instructions(char *instruction,
-			t_stack **stack_a, t_stack **stack_b);
-int		execute_push_instructions(char *instruction,
-			t_stack **stack_a, t_stack **stack_b);
-int		execute_rotate_instructions(char *instruction,
-			t_stack **stack_a, t_stack **stack_b);
-int		execute_reverse_instructions(char *instruction,
-			t_stack **stack_a, t_stack **stack_b);
-void	execute_instruction(char *instruction,
-			t_stack **stack_a, t_stack **stack_b);
+int					execute_swap_instructions(char *instruction,
+						t_stack **stack_a, t_stack **stack_b);
+int					execute_push_instructions(char *instruction,
+						t_stack **stack_a, t_stack **stack_b);
+int					execute_rotate_instructions(char *instruction,
+						t_stack **stack_a, t_stack **stack_b);
+int					execute_reverse_instructions(char *instruction,
+						t_stack **stack_a, t_stack **stack_b);
+void				execute_instruction(char *instruction, t_stack **stack_a,
+						t_stack **stack_b);
 
 #endif
