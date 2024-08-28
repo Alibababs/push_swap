@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:31:07 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/27 22:57:28 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/28 14:24:13 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,5 +79,18 @@ void				ft_reverse_rotate(t_stack **stack);
 void				ft_rra(t_stack **stack_a);
 void				ft_rrb(t_stack **stack_b);
 void				ft_rrr(t_stack **stack_a, t_stack **stack_b);
+
+/* CHECKER */
+
+int		execute_swap_instructions(char *instruction,
+			t_stack **stack_a, t_stack **stack_b);
+int		execute_push_instructions(char *instruction,
+			t_stack **stack_a, t_stack **stack_b);
+int		execute_rotate_instructions(char *instruction,
+			t_stack **stack_a, t_stack **stack_b);
+int		execute_reverse_instructions(char *instruction,
+			t_stack **stack_a, t_stack **stack_b);
+void	execute_instruction(char *instruction,
+			t_stack **stack_a, t_stack **stack_b);
 
 #endif

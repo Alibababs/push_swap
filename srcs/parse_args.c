@@ -6,11 +6,17 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:30:12 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/28 01:00:06 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/28 14:27:19 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	ft_error(void)
+{
+	write(2, "Error\n", 6);
+	exit(1);
+}
 
 static void	ft_free_tokens(char **tokens)
 {
