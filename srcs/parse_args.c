@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:30:12 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/28 14:27:19 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/28 17:39:07 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,29 +37,21 @@ static void	ft_add_to_stack(char *token, t_stack **stack_a, char **tokens)
 {
 	int	value;
 
-	if (!token || *token == '\0')
+	if (!token || *token == '\0' || !ft_is_valid_int(token)
+		|| !ft_is_int_range(token))
 	{
 		ft_free_tokens(tokens);
+		ft_free_stack(stack_a);
 		ft_error();
 	}
-	if (ft_is_valid_int(token) && ft_is_int_range(token))
-	{
-		value = ft_atoi(token);
-		if (!ft_has_duplicates(*stack_a, value))
-			ft_pushlst(stack_a, value);
-		else
-		{
-			ft_free_stack(stack_a);
-			ft_free_tokens(tokens);
-			ft_error();
-		}
-	}
-	else
+	value = ft_atoi(token);
+	if (ft_has_duplicates(*stack_a, value))
 	{
 		ft_free_stack(stack_a);
 		ft_free_tokens(tokens);
 		ft_error();
 	}
+	ft_pushlst(stack_a, value);
 }
 
 static void	ft_handle_token(char *arg, t_stack **stack_a)
@@ -67,9 +59,7 @@ static void	ft_handle_token(char *arg, t_stack **stack_a)
 	char	**tokens;
 	int		i;
 
-	if (!arg || !*arg)
-		ft_error();
-	if (ft_str_is_whitespace(arg))
+	if (!arg || !*arg || ft_str_is_whitespace(arg))
 		ft_error();
 	tokens = ft_split(arg, ' ');
 	if (tokens)
@@ -83,7 +73,7 @@ static void	ft_handle_token(char *arg, t_stack **stack_a)
 
 void	ft_parse_args(int argc, char **argv, t_stack **stack_a)
 {
-	int		i;
+	int	i;
 
 	i = 0;
 	while (++i < argc)

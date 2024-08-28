@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/28 14:32:07 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/28 14:32:09 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/28 17:57:17 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,9 @@ void	execute_instruction(char *instruction,
 		&& !execute_rotate_instructions(instruction, stack_a, stack_b)
 		&& !execute_reverse_instructions(instruction, stack_a, stack_b))
 	{
+		ft_free_stack(stack_a);
+		ft_free_stack(stack_b);
+		free(instruction);
 		ft_error();
 	}
 }
