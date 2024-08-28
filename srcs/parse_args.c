@@ -6,7 +6,7 @@
 /*   By: alibaba <alibaba@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/27 20:30:12 by alibaba           #+#    #+#             */
-/*   Updated: 2024/08/28 17:39:07 by alibaba          ###   ########.fr       */
+/*   Updated: 2024/08/28 19:20:37 by alibaba          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,10 @@ static void	ft_handle_token(char *arg, t_stack **stack_a)
 	int		i;
 
 	if (!arg || !*arg || ft_str_is_whitespace(arg))
+	{
+		ft_free_stack(stack_a);
 		ft_error();
+	}
 	tokens = ft_split(arg, ' ');
 	if (tokens)
 	{
